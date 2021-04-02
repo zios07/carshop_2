@@ -20,6 +20,11 @@ public class CarService {
 
     private final CarRepository carRepository;
 
+    /**
+     * Performs the search operation based on the query returned from getQuerySpecification method
+     * @param request
+     * @return
+     */
     public List<Car> searchCars(CarSearchRequest request) {
         return carRepository.findAll(getQuerySpecification(request));
     }
@@ -28,6 +33,11 @@ public class CarService {
         return carRepository.findAll();
     }
 
+    /**
+     * Creates the query based on the non null fields of the UI form
+     * @param example
+     * @return
+     */
     private Specification<Car> getQuerySpecification(
             CarSearchRequest example) {
 

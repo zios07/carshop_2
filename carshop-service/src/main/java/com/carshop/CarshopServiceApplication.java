@@ -22,10 +22,19 @@ public class CarshopServiceApplication implements CommandLineRunner {
         this.brandRepository = brandRepository;
     }
 
+    /**
+     * Main method to startup the application
+     * @param args
+     */
     public static void main(String[] args) {
         SpringApplication.run(CarshopServiceApplication.class, args);
     }
 
+    /**
+     * Runs every time the application starts, checks if there are any cars in the database, if there are none, it creates
+     * three car objects and stores them in the database
+     * @param args
+     */
     @Override
     public void run(String... args) {
 

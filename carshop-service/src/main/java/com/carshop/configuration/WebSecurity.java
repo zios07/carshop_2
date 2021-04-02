@@ -11,6 +11,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
 
+/**
+ * This class holds the application security configuration
+ */
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
 
